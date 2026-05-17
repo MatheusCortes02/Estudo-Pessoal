@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caixa">
+        <div id="sessao-login">
+            <h1>Login</h1>
+            <form onsubmit="event.preventDefault()">
+                <label for="username">Nome de usuário</label>
+                <input type="text" id="user" name="username" required placeholder="Digite o nome de usuário">
+                <label for="password">Senha</label>
+                <input type="password" id="senha" name="password" required placeholder="Digite a senha">
+                <button type="button" onclick="logar()">Entrar</button>
+            </form>
+            <h3>Não possui uma conta? <button id="trocar">Cadastre-se</button></h3>
+        </div>
+
+        <form id="cadastro" style="display: none;" onsubmit="event.preventDefault()">
+            <h1>Cadastro</h1>
+            <label for="username-cad">Novo usuário</label>
+            <input type="text" id="user-cad" required placeholder="Crie um usuário">
+            <label for="password-cad">Nova Senha</label>
+            <input type="password" id="senha-cad" required placeholder="Crie uma senha">
+            <button type="button" onclick="cadastrar()">Salvar Cadastro</button>
+            <button type="button" id="voltar" style="margin-top: 10px;">Voltar ao Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

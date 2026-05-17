@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+
+    <div class="caixa">
+
+    <div id="login">
+    <form onsubmit="event.preventDefault()">
+        <label for="username">Nome de Usuario</label>
+        <input type="text" id="userLogin" name="username" required placeholder="Digite aqui o nome de usuario">
+        <label for="password">Senha</label>
+        <input type="password" id="senhaLogin" name="password" required placeholder="Digite aqui a senha">
+        <button type="button" onclick="logar()">Entrar</button>
+    </form>
+    <h3>Não possui uma conta? <button id="trocar">Cadastre-se</button></h3>
+    </div>
+    
+    
+    <form id="cadastro" style="display: none;" onsubmit="event.preventDefault()">
+        <label for="username-cad">Nome de Usuario</label>
+        <input type="text" id="userCad" required placeholder="Digite aqui o nome de usuario">
+        <label for="password-cad">Senha</label>
+        <input type="password" id="senhaCad" required placeholder="Digite aqui a senha">
+        <button type="button" onclick="cadastrar()">Salvar cadastro</button>
+        <button id="voltar" onclick="voltar()">Voltar para login</button>
+    </form>
+    
+
+
+
+    </div>
+    <script src="a.js"></script>
+</body>
+</html>
