@@ -1,0 +1,40 @@
+@layer tokens {
+  :root {
+    /* === CORES === */
+    --ink:        #1A1A18;
+    --paper:      #F4F1EA;
+    --paper-deep: #E8E2D5;
+    --sage:       #6B7F6B;
+    --sage-deep:  #3D4A3D;
+    --clay:       #C8704C;
+    --mist:       #9CA89C;
+    --line:       #D4CFC2;
+
+    /* === TIPOGRAFIA === */
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body:    'Inter Tight', system-ui, sans-serif;
+
+    /* Escala fluida */
+    --text-hero: clamp(3.5rem, 8vw, 7rem);
+    --text-h2:   clamp(2.25rem, 4vw, 4rem);
+    --text-body: clamp(1rem, 1.1vw, 1.125rem);
+
+    /* === ESPAÇAMENTO === */
+    --section-pad:   clamp(6rem, 12vw, 12rem);
+    --container-max: 1440px;
+    --container-pad: clamp(1.5rem, 5vw, 5rem);
+
+    /* === NAVBAR === */
+    --navbar-h:          72px;
+    --navbar-h-scrolled: 56px;
+
+    /* === EASING === */
+    --ease: cubic-bezier(.2, .8, .2, 1);
+    --ease-out: cubic-bezier(0, 0, .2, 1);
+
+    /* === TRANSIÇÕES === */
+    --t-fast:   150ms;
+    --t-mid:    300ms;
+    --t-slow:   800ms;
+  }
+}

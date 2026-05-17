@@ -1,0 +1,73 @@
+/* ─────────────────────────────────────────
+   variables.css — Design tokens
+   ───────────────────────────────────────── */
+
+:root {
+  /* ── PALETA ── */
+  --color-navy-deep:  #021D38;
+  --color-navy:       #042C53;
+  --color-navy-mid:   #185FA5;
+  --color-navy-soft:  #85B7EB;
+  --color-gold:       #BA7517;
+  --color-amber:      #EF9F27;
+  --color-ice:        #F4F6F9;
+  --color-line:       #E5E7EB;
+  --color-text:       #0F1923;
+  --color-text-muted: #5F5E5A;
+  --color-white:      #FFFFFF;
+  --color-wa:         #1D9E75;
+  --color-error:      #DC2626;
+
+  /* ── TIPOGRAFIA ── */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-sans:    "Inter Tight", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  --fs-display-xl: clamp(3rem, 6vw + 1rem, 5.5rem);
+  --fs-display-lg: clamp(2.25rem, 3vw + 1rem, 3.5rem);
+  --fs-display-md: clamp(1.75rem, 2vw + 1rem, 2.25rem);
+  --fs-body-lg:    clamp(1.05rem, 0.5vw + 1rem, 1.15rem);
+  --fs-body:       1rem;
+  --fs-body-sm:    0.875rem;
+  --fs-caption:    0.75rem;
+  --fs-mono:       0.78rem;
+
+  --lh-tight:    1.05;
+  --lh-normal:   1.55;
+  --lh-loose:    1.7;
+  --ls-display:  -0.02em;
+  --ls-caption:  0.14em;
+
+  /* ── ESPAÇAMENTO (escala 4pt) ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── LAYOUT ── */
+  --container-max: 1280px;
+  --container-px:  clamp(1.25rem, 4vw, 3rem);
+  --radius-sm:     6px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+  --radius-full:   999px;
+
+  /* ── SOMBRAS (tintadas) ── */
+  --shadow-sm: 0 1px 2px rgba(4, 44, 83, 0.04);
+  --shadow-md: 0 4px 16px -4px rgba(4, 44, 83, 0.08);
+  --shadow-lg: 0 24px 48px -16px rgba(4, 44, 83, 0.12);
+  --shadow-wa: 0 12px 32px -8px rgba(29, 158, 117, 0.4);
+
+  /* ── EASINGS ── */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 800ms;
+}

@@ -1,0 +1,88 @@
+/* ─────────────────────────────────────────
+   base.css — Body, tipografia, utilitários
+   ───────────────────────────────────────── */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+/* ── EYEBROW / SECTION TAG ── */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: 500;
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+}
+
+/* ── DISPLAY HEADINGS ── */
+.display-xl {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-xl);
+  font-weight: 400;
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-lg);
+  font-weight: 400;
+  letter-spacing: var(--ls-display);
+  line-height: 1.1;
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-md);
+  font-weight: 400;
+  letter-spacing: var(--ls-display);
+  line-height: 1.15;
+}
+
+/* ── BODY TEXT ── */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-sm {
+  font-size: var(--fs-body-sm);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+}
+
+/* ── UTILITIES ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-line);
+  margin: var(--space-8) 0;
+}
+
+/* Selection */
+::selection {
+  background: rgba(186, 117, 23, 0.2);
+  color: var(--color-navy);
+}

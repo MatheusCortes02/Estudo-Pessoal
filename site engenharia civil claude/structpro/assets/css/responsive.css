@@ -1,0 +1,205 @@
+/* ─────────────────────────────────────────
+   responsive.css — Media queries (mobile-first)
+   ───────────────────────────────────────── */
+
+/* ── TABLET / MD ── */
+@media (min-width: 640px) {
+  .hero__image {
+    height: 420px;
+  }
+
+  .process__step {
+    gap: var(--space-8);
+  }
+
+  .contact__form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── DESKTOP / LG ── */
+@media (min-width: 768px) {
+  /* Navbar */
+  .navbar__nav {
+    display: flex;
+  }
+
+  .navbar__cta {
+    display: inline-flex;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  /* Hero */
+  .hero__inner {
+    grid-template-columns: 60fr 40fr;
+    gap: var(--space-16);
+    padding: var(--space-32) 0 var(--space-24);
+    align-items: center;
+  }
+
+  .hero__image {
+    height: 480px;
+  }
+
+  .hero__image-wrap {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+  }
+
+  /* Services bento */
+  .services__bento {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .services__card--large {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .services__card--small {
+    grid-column: span 5;
+  }
+
+  /* Process — horizontal stepper on desktop */
+  .process__steps {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .process__steps::before {
+    display: none;
+  }
+
+  .process__step {
+    flex-direction: column;
+    flex: 1;
+    border-bottom: none;
+    border-right: none;
+    padding: 0 var(--space-6) var(--space-6) 0;
+    position: relative;
+  }
+
+  .process__step:last-child {
+    padding-right: 0;
+  }
+
+  /* Connector between steps */
+  .process__step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: var(--space-6);
+    height: 1px;
+    background: rgba(186, 117, 23, 0.35);
+  }
+
+  .process__step-indicator {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--space-4);
+  }
+
+  /* Numbers grid */
+  .numbers__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .numbers__item:nth-child(2n) {
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .numbers__item:nth-child(3),
+  .numbers__item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .numbers__item:last-child {
+    border-right: none;
+  }
+
+  /* Numbers — alternating alignment */
+  .numbers__item:nth-child(2) { text-align: right; }
+  .numbers__item:nth-child(3) { text-align: right; }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials__card-wrap {
+    display: block;
+  }
+
+  .carousel-dots {
+    display: none;
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* ── WIDE / XL ── */
+@media (min-width: 1024px) {
+  .hero__inner {
+    padding: var(--space-32) 0 var(--space-32);
+  }
+
+  .hero__image {
+    height: 560px;
+  }
+
+  .process__step {
+    padding: 0 var(--space-8) var(--space-8) 0;
+  }
+}
+
+/* ── EXTRA WIDE ── */
+@media (min-width: 1280px) {
+  .numbers__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── WHATSAPP FAB MOBILE — solo icon ── */
+@media (max-width: 767px) {
+  .wa-fab {
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .wa-fab:hover {
+    width: 56px;
+  }
+
+  .wa-fab__text {
+    display: none;
+  }
+}

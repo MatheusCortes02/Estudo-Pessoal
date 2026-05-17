@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StructPro Engenharia — Projetos estruturais, reformas corporativas, laudos técnicos e infraestrutura urbana em Vitória/ES. 16 anos, +500 obras entregues, CREA-ES.">
+  <title>StructPro Engenharia — Estrutura que sustenta. Engenharia que entrega.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="container">
+    <div class="navbar__inner">
+
+      <a href="#inicio" class="navbar__logo" aria-label="StructPro Engenharia — página inicial">
+        <!-- Logo SVG: viga em I -->
+        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="0" y="0" width="32" height="6" rx="1.5" fill="white"/>
+          <rect x="11" y="6" width="10" height="28" rx="1" fill="white"/>
+          <rect x="0" y="34" width="32" height="6" rx="1.5" fill="#EF9F27"/>
+        </svg>
+        <div class="navbar__logo-wordmark">
+          <span class="navbar__logo-name">Struct<span>Pro</span></span>
+          <span class="navbar__logo-sub">Engenharia</span>
+        </div>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Navegação principal">
+        <a href="#servicos" class="navbar__link">Serviços</a>
+        <a href="#processo" class="navbar__link">Processo</a>
+        <a href="#resultados" class="navbar__link">Resultados</a>
+        <a href="#depoimentos" class="navbar__link">Sobre</a>
+        <a href="#contato" class="navbar__link">Contato</a>
+      </nav>
+
+      <a href="#contato" class="btn btn--primary navbar__cta" id="navbar-cta">Solicitar orçamento</a>
+
+      <button
+        class="navbar__hamburger"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<nav class="navbar__drawer" id="mobile-drawer" aria-label="Menu mobile">
+  <button class="navbar__drawer-close" onclick="document.querySelector('.navbar__hamburger').click()" aria-label="Fechar menu">✕</button>
+  <a href="#servicos" class="navbar__drawer-link">Serviços</a>
+  <a href="#processo" class="navbar__drawer-link">Processo</a>
+  <a href="#resultados" class="navbar__drawer-link">Resultados</a>
+  <a href="#depoimentos" class="navbar__drawer-link">Sobre</a>
+  <a href="#contato" class="navbar__drawer-link">Contato</a>
+  <a href="#contato" class="btn btn--primary" style="margin-top:1rem;">Solicitar orçamento</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<main>
+<section id="inicio" class="hero">
+
+  <!-- Technical grid background -->
+  <div class="hero__grid-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#185FA5" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+      <!-- Axis labels — technical feel -->
+      <text x="8" y="62" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.35">+0.000</text>
+      <text x="8" y="122" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.35">+3.200</text>
+      <text x="8" y="182" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.35">+6.400</text>
+      <text x="8" y="242" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.35">+9.600</text>
+      <text x="8" y="302" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.35">+12.800</text>
+      <text x="8" y="362" font-family="monospace" font-size="8" fill="#85B7EB" opacity="0.25">+16.000</text>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero__inner">
+
+      <!-- Content -->
+      <div class="hero__content">
+        <div class="hero__pill">
+          <div class="cred-pill">
+            <span class="cred-pill__dot"></span>
+            CREA-ES · ART Registrada · Desde 2008
+          </div>
+        </div>
+
+        <h1 class="display-xl hero__headline">
+          Estruturas que sustentam.<br>
+          <em>Engenharia que entrega.</em>
+        </h1>
+
+        <p class="hero__subhead">
+          Projetamos, executamos e laudamos obras com rigor técnico, prazo cumprido e total transparência. Há 16 anos servindo construtoras, prefeituras e investidores no Espírito Santo.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#contato" class="btn btn--primary">
+            Solicitar orçamento técnico
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#processo" class="btn btn--ghost">Ver processo →</a>
+        </div>
+
+        <div class="hero__strip">
+          <div class="hero__strip-inner">
+            <span class="hero__strip-item">+500 obras entregues</span>
+            <span class="hero__strip-item">12 engenheiros no time</span>
+            <span class="hero__strip-item">98% dos clientes retornam</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero__image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+          alt="Engenheiros da StructPro analisando planta de projeto"
+          class="hero__image"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SERVIÇOS
+════════════════════════════════════════ -->
+<section id="servicos" class="services">
+  <div class="container">
+
+    <div class="services__header reveal">
+      <span class="eyebrow">01 / Serviços</span>
+      <h2 class="display-lg">O que fazemos.</h2>
+      <p class="services__subtitle">
+        Quatro frentes, um padrão técnico. Todos os projetos saem com ART assinada e acompanhamento até o laudo final.
+      </p>
+    </div>
+
+    <div class="services__bento reveal-stagger">
+
+      <!-- Card grande -->
+      <article class="service-card service-card--large services__card--large">
+        <span class="service-card__num">001/004</span>
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+          <line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/>
+          <line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/>
+        </svg>
+        <h3 class="service-card__title">Projetos Estruturais</h3>
+        <p class="service-card__desc">
+          Cálculo estrutural, plantas, memorial e ART. Concreto armado, estrutura metálica e mista. Do estudo de viabilidade ao projeto executivo com especificações completas.
+        </p>
+        <div style="margin-top: var(--space-8);">
+          <img
+            src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&w=600&q=80"
+            alt="Planta e projeto técnico estrutural"
+            style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-top:var(--space-4);"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card services__card--small">
+        <span class="service-card__num">002/004</span>
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9,22 9,12 15,12 15,22"/>
+        </svg>
+        <h3 class="service-card__title">Reformas Corporativas</h3>
+        <p class="service-card__desc">Reforma técnica de salas comerciais, escritórios e indústrias com laudo de segurança.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card services__card--small">
+        <span class="service-card__num">003/004</span>
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+          <polyline points="14,2 14,8 20,8"/>
+          <polyline points="9,15 11,17 15,13"/>
+        </svg>
+        <h3 class="service-card__title">Laudos e Vistorias</h3>
+        <p class="service-card__desc">Laudos técnicos para vistoria predial, recebimento de obra e perícia judicial.</p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="service-card services__card--small">
+        <span class="service-card__num">004/004</span>
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 20h20"/><path d="M6 20V10l6-6 6 6v10"/>
+          <path d="M10 20v-6h4v6"/>
+        </svg>
+        <h3 class="service-card__title">Infraestrutura Urbana</h3>
+        <p class="service-card__desc">Pavimentação, drenagem, contenções e obras públicas para prefeituras e órgãos municipais.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PROCESSO
+════════════════════════════════════════ -->
+<section id="processo" class="process">
+  <div class="container">
+
+    <div class="process__header reveal">
+      <span class="eyebrow">02 / Processo</span>
+      <h2 class="display-lg">Como uma obra é entregue na StructPro.</h2>
+      <p class="process__subtitle">
+        Cinco etapas. Sem zona cinzenta entre elas. Você sabe em qual fase está, o que vem a seguir e quem é o responsável técnico.
+      </p>
+    </div>
+
+    <div class="process__steps reveal-stagger">
+
+      <div class="process__step">
+        <div class="process__step-indicator">
+          <div class="process__step-num">01</div>
+        </div>
+        <div class="process__step-content">
+          <span class="process__step-label">Consulta inicial</span>
+          <h3 class="process__step-title">Diagnóstico sem compromisso</h3>
+          <p class="process__step-desc">Reunião gratuita para escopo, prazo e condicionantes. Sem compromisso.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__step-indicator">
+          <div class="process__step-num">02</div>
+        </div>
+        <div class="process__step-content">
+          <span class="process__step-label">Estudo de viabilidade</span>
+          <h3 class="process__step-title">Números na mesa</h3>
+          <p class="process__step-desc">Análise técnica, orçamento detalhado e cronograma preliminar.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__step-indicator">
+          <div class="process__step-num">03</div>
+        </div>
+        <div class="process__step-content">
+          <span class="process__step-label">Projeto e planejamento</span>
+          <h3 class="process__step-title">Plantas e ART emitida</h3>
+          <p class="process__step-desc">Plantas, memorial descritivo, especificações e ART emitida.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__step-indicator">
+          <div class="process__step-num">04</div>
+        </div>
+        <div class="process__step-content">
+          <span class="process__step-label">Execução</span>
+          <h3 class="process__step-title">Engenheiro residente</h3>
+          <p class="process__step-desc">Obra gerenciada por engenheiro residente, com relatórios quinzenais.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__step-indicator">
+          <div class="process__step-num">05</div>
+        </div>
+        <div class="process__step-content">
+          <span class="process__step-label">Entrega e laudo</span>
+          <h3 class="process__step-title">Documentação completa</h3>
+          <p class="process__step-desc">Vistoria final, plantas as-built e laudo técnico assinado.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     NÚMEROS
+════════════════════════════════════════ -->
+<section id="resultados" class="numbers">
+  <div class="numbers__bg-text" aria-hidden="true">StructPro</div>
+
+  <div class="container">
+    <div class="numbers__header reveal">
+      <span class="eyebrow numbers__eyebrow">03 / Resultados</span>
+      <h2 class="display-lg numbers__headline">
+        16 anos. 500 obras. Zero dor de cabeça pós-entrega.
+      </h2>
+    </div>
+
+    <div class="numbers__grid reveal-stagger">
+
+      <div class="numbers__item">
+        <span
+          class="numbers__value"
+          data-counter
+          data-target="16"
+          data-suffix="+"
+        >16+</span>
+        <span class="numbers__label">Anos de mercado</span>
+      </div>
+
+      <div class="numbers__item">
+        <span
+          class="numbers__value"
+          data-counter
+          data-target="500"
+          data-prefix="+"
+        >+500</span>
+        <span class="numbers__label">Obras entregues</span>
+      </div>
+
+      <div class="numbers__item">
+        <span
+          class="numbers__value"
+          data-counter
+          data-target="98"
+          data-suffix="%"
+        >98%</span>
+        <span class="numbers__label">Clientes que retornam</span>
+      </div>
+
+      <div class="numbers__item">
+        <span
+          class="numbers__value"
+          data-counter
+          data-target="12"
+        >12</span>
+        <span class="numbers__label">Engenheiros no time</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     DEPOIMENTOS
+════════════════════════════════════════ -->
+<section id="depoimentos" class="testimonials">
+  <div class="container">
+
+    <div class="testimonials__header reveal">
+      <span class="eyebrow">04 / O que dizem</span>
+      <h2 class="display-lg">Quem confia, contrata de novo.</h2>
+      <p class="testimonials__subtitle">Clientes que nos escolheram — e voltaram.</p>
+    </div>
+
+    <div class="testimonials__grid">
+
+      <div class="testimonials__card-wrap active">
+        <article class="testimonial-card">
+          <p class="testimonial-card__text">
+            "A StructPro entregou nosso projeto 2 semanas antes do prazo. Equipe altamente técnica e comunicativa. Documentação impecável do início ao laudo final."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: #042C53;" aria-hidden="true">JM</div>
+            <div class="testimonial-card__meta">
+              <span class="testimonial-card__name">João Mendes</span>
+              <span class="testimonial-card__role">Diretor · Construtora Mend ES</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonials__card-wrap">
+        <article class="testimonial-card">
+          <p class="testimonial-card__text">
+            "Laudos impecáveis, documentação completa. Renovamos o contrato pelo 3º ano consecutivo. A segurança jurídica que nos oferecem é diferencial absoluto."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: #185FA5;" aria-hidden="true">CR</div>
+            <div class="testimonial-card__meta">
+              <span class="testimonial-card__name">Carla Ribeiro</span>
+              <span class="testimonial-card__role">Engª Chefe · Prefeitura de Serra ES</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonials__card-wrap">
+        <article class="testimonial-card">
+          <p class="testimonial-card__text">
+            "Do projeto à entrega, sem surpresas. A transparência deles é diferencial no mercado. Sabíamos o que estava acontecendo em cada fase da obra."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: #BA7517;" aria-hidden="true">FA</div>
+            <div class="testimonial-card__meta">
+              <span class="testimonial-card__name">Felipe Andrade</span>
+              <span class="testimonial-card__role">Sócio · Invest.imóveis</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="carousel-dots" role="tablist" aria-label="Depoimentos"></div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CONTATO
+════════════════════════════════════════ -->
+<section id="contato" class="contact">
+  <div class="container">
+
+    <div class="contact__header reveal">
+      <span class="eyebrow">05 / Contato</span>
+      <h2 class="display-lg">Pronto para tirar a obra do papel?</h2>
+      <p class="contact__subtitle">
+        Envie o escopo. Em até 24h um engenheiro retorna com um caminho técnico.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+
+      <!-- Info -->
+      <div class="contact__info reveal">
+        <span class="contact__info-eyebrow">Fale direto com a equipe</span>
+
+        <div class="contact__info-items">
+          <div class="contact-info-item">
+            <svg class="contact-info-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div class="contact-info-item__content">
+              <span class="contact-info-item__label">Endereço</span>
+              <span class="contact-info-item__value">Av. Princesa Isabel, 580 — Vitória/ES, 29010-360</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <svg class="contact-info-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <div class="contact-info-item__content">
+              <span class="contact-info-item__label">Telefone</span>
+              <span class="contact-info-item__value">(27) 3000-0000</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <svg class="contact-info-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <div class="contact-info-item__content">
+              <span class="contact-info-item__label">E-mail</span>
+              <span class="contact-info-item__value">contato@structpro.eng.br</span>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://wa.me/5527999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20gratuito."
+          class="btn btn--wa"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Conversar no WhatsApp"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Falar com engenheiro
+        </a>
+      </div>
+
+      <!-- Form -->
+      <div class="contact__form reveal">
+        <form id="contact-form" class="contact__form-inner" novalidate>
+
+          <div class="form-group">
+            <label for="field-name" class="form-label">Nome completo <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="field-name"
+              name="name"
+              class="form-input"
+              placeholder="Seu nome"
+              required
+              autocomplete="name"
+            >
+            <span class="form-error" role="alert"></span>
+          </div>
+
+          <div class="contact__form-row">
+            <div class="form-group">
+              <label for="field-email" class="form-label">E-mail <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="field-email"
+                name="email"
+                class="form-input"
+                placeholder="seu@email.com"
+                required
+                autocomplete="email"
+              >
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="field-phone" class="form-label">Telefone</label>
+              <input
+                type="tel"
+                id="field-phone"
+                name="phone"
+                class="form-input"
+                placeholder="(27) 00000-0000"
+                autocomplete="tel"
+              >
+              <span class="form-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="field-service" class="form-label">Tipo de serviço <span aria-hidden="true">*</span></label>
+            <div class="form-select-wrapper">
+              <select id="field-service" name="service" class="form-select" required>
+                <option value="">Selecione…</option>
+                <option value="estrutural">Projeto Estrutural</option>
+                <option value="reforma">Reforma Corporativa</option>
+                <option value="laudo">Laudo / Vistoria</option>
+                <option value="infraestrutura">Infraestrutura Urbana</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <span class="form-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="field-message" class="form-label">Descreva o projeto <span aria-hidden="true">*</span></label>
+            <textarea
+              id="field-message"
+              name="message"
+              class="form-textarea"
+              placeholder="Localização, tipo de obra, prazo estimado, condicionantes relevantes…"
+              required
+              minlength="20"
+            ></textarea>
+            <span class="form-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--navy" style="width:100%;justify-content:center;">
+            Enviar mensagem
+          </button>
+
+          <p class="contact__microcopy">Resposta em até 24h úteis. Sem disparo de e-mail marketing.</p>
+
+        </form>
+
+        <!-- Success state -->
+        <div id="form-success" class="form-success" aria-live="polite">
+          <svg class="form-success__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <h3 class="form-success__title">Mensagem enviada.</h3>
+          <p class="form-success__text">Um engenheiro da StructPro retorna em até 24h úteis com um caminho técnico para o seu projeto.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer__brand-name">Struct<span>Pro</span></div>
+        <p class="footer__brand-desc">Engenharia civil com rigor técnico, prazo e total transparência. Vitória/ES desde 2008.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Serviços -->
+      <div>
+        <p class="footer__col-title">Serviços</p>
+        <ul class="footer__links">
+          <li><a href="#servicos" class="footer__link">Projetos Estruturais</a></li>
+          <li><a href="#servicos" class="footer__link">Reformas Corporativas</a></li>
+          <li><a href="#servicos" class="footer__link">Laudos e Vistorias</a></li>
+          <li><a href="#servicos" class="footer__link">Infraestrutura Urbana</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Empresa -->
+      <div>
+        <p class="footer__col-title">Empresa</p>
+        <ul class="footer__links">
+          <li><a href="#depoimentos" class="footer__link">Sobre</a></li>
+          <li><a href="#processo" class="footer__link">Processo</a></li>
+          <li><a href="#contato" class="footer__link">Contato</a></li>
+          <li><a href="#" class="footer__link">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__legal">CREA-ES 000000-D · CNPJ 00.000.000/0001-00 · © 2024 StructPro Engenharia Ltda.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════
+     WHATSAPP FAB
+════════════════════════════════════════ -->
+<a
+  href="https://wa.me/5527999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20gratuito."
+  class="wa-fab"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp — Orçamento gratuito"
+>
+  <svg class="wa-fab__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="wa-fab__text">Falar com engenheiro</span>
+</a>
+
+
+<!-- Scripts -->
+<script src="assets/js/navbar.js" defer></script>
+<script src="assets/js/scroll-reveal.js" defer></script>
+<script src="assets/js/counter.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+<script src="assets/js/depoimentos.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

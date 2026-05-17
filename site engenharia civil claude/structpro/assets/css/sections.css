@@ -1,0 +1,428 @@
+/* ─────────────────────────────────────────
+   sections.css — Hero, Serviços, Processo, Números, Depoimentos, Contato
+   ───────────────────────────────────────── */
+
+/* ── HERO ── */
+.hero {
+  min-height: 100dvh;
+  background: var(--color-navy);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Technical grid background — SVG inline */
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__grid-bg svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+}
+
+/* Gradient overlay bottom fade */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, var(--color-navy));
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  padding: var(--space-32) 0 var(--space-16);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.hero__headline {
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+.hero__subhead {
+  font-size: var(--fs-body-lg);
+  color: rgba(133, 183, 235, 0.8);
+  max-width: 52ch;
+  line-height: var(--lh-loose);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Hero credibility strip */
+.hero__strip {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero__strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.hero__strip-item {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+  color: rgba(133, 183, 235, 0.45);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero__strip-item::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.hero__image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── SERVIÇOS ── */
+.services {
+  background: var(--color-ice);
+  padding: var(--space-24) 0;
+}
+
+.services__header {
+  max-width: 56ch;
+  margin-bottom: var(--space-12);
+}
+
+.services__subtitle {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-loose);
+  margin-top: var(--space-4);
+}
+
+/* Bento grid: 1 large + 3 small */
+.services__bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* ── PROCESSO ── */
+.process {
+  background: var(--color-white);
+  padding: var(--space-24) 0;
+}
+
+.process__header {
+  max-width: 56ch;
+  margin-bottom: var(--space-16);
+}
+
+.process__subtitle {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-loose);
+  margin-top: var(--space-4);
+}
+
+/* Mobile: stacked accordion */
+.process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Vertical connector line */
+.process__steps::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: 32px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(186, 117, 23, 0.4) 10%,
+    rgba(186, 117, 23, 0.4) 90%,
+    transparent
+  );
+}
+
+.process__step {
+  display: flex;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  position: relative;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.process__step:last-child {
+  border-bottom: none;
+}
+
+.process__step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--space-2);
+}
+
+.process__step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.process__step-content {
+  flex: 1;
+  padding-bottom: var(--space-2);
+}
+
+.process__step-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.process__step-title {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.process__step-desc {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-loose);
+}
+
+/* ── NÚMEROS ── */
+.numbers {
+  background: var(--color-navy);
+  padding: var(--space-24) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.numbers__bg-text {
+  position: absolute;
+  bottom: -0.2em;
+  right: -0.05em;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 14rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  line-height: 1;
+  letter-spacing: var(--ls-display);
+  user-select: none;
+}
+
+.numbers__header {
+  margin-bottom: var(--space-16);
+}
+
+.numbers__eyebrow {
+  color: var(--color-gold);
+}
+
+.numbers__headline {
+  color: var(--color-white);
+  max-width: 24ch;
+}
+
+.numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.numbers__item {
+  padding: var(--space-8) var(--space-6);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.numbers__item:nth-child(2n) {
+  border-right: none;
+}
+
+.numbers__item:nth-child(3),
+.numbers__item:nth-child(4) {
+  border-bottom: none;
+}
+
+.numbers__value {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--color-amber);
+  line-height: 1;
+  letter-spacing: var(--ls-display);
+  display: block;
+}
+
+.numbers__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+  color: var(--color-navy-soft);
+  opacity: 0.5;
+  margin-top: var(--space-2);
+  display: block;
+}
+
+/* ── DEPOIMENTOS ── */
+.testimonials {
+  background: var(--color-ice);
+  padding: var(--space-24) 0;
+}
+
+.testimonials__header {
+  max-width: 44ch;
+  margin-bottom: var(--space-12);
+}
+
+.testimonials__subtitle {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* Mobile carousel state */
+.testimonials__card-wrap {
+  display: none;
+}
+
+.testimonials__card-wrap.active {
+  display: block;
+}
+
+/* ── CONTATO ── */
+.contact {
+  background: var(--color-white);
+  padding: var(--space-24) 0;
+}
+
+.contact__header {
+  margin-bottom: var(--space-16);
+}
+
+.contact__subtitle {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-muted);
+  max-width: 44ch;
+  line-height: var(--lh-loose);
+  margin-top: var(--space-4);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+.contact__info {}
+
+.contact__info-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: 500;
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-6);
+  display: block;
+}
+
+.contact__info-items {
+  margin-bottom: var(--space-8);
+}
+
+.contact__form {}
+
+.contact__form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.contact__microcopy {
+  font-size: 0.73rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  margin-top: var(--space-2);
+  text-align: center;
+}

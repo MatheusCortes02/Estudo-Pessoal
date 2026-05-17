@@ -1,0 +1,150 @@
+/* ─────────────────────────────────────────
+   animations.css — Keyframes, scroll-reveal, transitions
+   ───────────────────────────────────────── */
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out-expo),
+    transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for child elements */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out-expo),
+    transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 60ms; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 120ms; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 180ms; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 240ms; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 300ms; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── KEYFRAMES ── */
+
+/* Pulse dot (hero pill) */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.75); }
+}
+
+/* Subtle float on hero image */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Count-up shimmer */
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* Slide in from left */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade up hero elements */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── HERO ENTRANCE SEQUENCE ── */
+.hero__pill {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 200ms both;
+}
+
+.hero__headline {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 380ms both;
+}
+
+.hero__subhead {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 520ms both;
+}
+
+.hero__ctas {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 640ms both;
+}
+
+.hero__strip {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 760ms both;
+}
+
+.hero__image-wrap {
+  animation: hero-fade-up var(--duration-slow) var(--ease-out-expo) 460ms both;
+}
+
+/* ── CONNECTOR STEPPER (desktop) ── */
+.process__connector {
+  display: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(186, 117, 23, 0.4),
+    transparent
+  );
+  flex: 1;
+  margin-top: 15px;
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__pill,
+  .hero__headline,
+  .hero__subhead,
+  .hero__ctas,
+  .hero__strip,
+  .hero__image-wrap {
+    animation: none;
+    opacity: 1;
+  }
+
+  .cred-pill__dot {
+    animation: none;
+  }
+
+  .hero__image-wrap {
+    animation: none;
+  }
+}

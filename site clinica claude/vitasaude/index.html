@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clínica médica multiespecialidade em Vitória/ES. Primeira consulta com no mínimo 40 minutos. Medicina que escuta antes de prescrever.">
+  <title>VitaSaúde — Medicina que escuta antes de prescrever</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter+Tight:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- SVG paper grain filter — zero dimensions, referenced via filter: url(#grain) -->
+  <svg class="noise-filter" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.72 0.68" numOctaves="4" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="mono"/>
+        <feBlend in="SourceGraphic" in2="mono" mode="overlay" result="blended"/>
+        <feComposite in="blended" in2="SourceGraphic" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
+
+
+  <!-- ================================================================
+       NAVBAR
+       ================================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__inner" aria-label="Navegação principal">
+
+      <a href="/" class="navbar__logo" aria-label="VitaSaúde — página inicial">
+        <span aria-hidden="true">Vita</span><span class="logo-accent" aria-hidden="true">Saúde</span>
+      </a>
+
+      <ul class="navbar__links" role="list" aria-label="Menu principal">
+        <li><a href="#especialidades" class="navbar__link">Especialidades</a></li>
+        <li><a href="#medicos"        class="navbar__link">Médicos</a></li>
+        <li><a href="#como-funciona"  class="navbar__link">Como funciona</a></li>
+        <li><a href="#convenios"      class="navbar__link">Convênios</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="#agendar" class="btn btn--primary">Agendar</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="toggle-bar" aria-hidden="true"></span>
+        <span class="toggle-bar" aria-hidden="true"></span>
+      </button>
+
+    </nav>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile" hidden>
+      <ul role="list">
+        <li><a href="#especialidades" class="mobile-link">Especialidades</a></li>
+        <li><a href="#medicos"        class="mobile-link">Médicos</a></li>
+        <li><a href="#como-funciona"  class="mobile-link">Como funciona</a></li>
+        <li><a href="#convenios"      class="mobile-link">Convênios</a></li>
+        <li><a href="#faq"            class="mobile-link">Perguntas</a></li>
+      </ul>
+      <a href="#agendar" class="btn btn--primary mobile-cta">Marcar primeira consulta</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ================================================================
+         01 · HERO
+         ================================================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow reveal" aria-label="Clínica multiespecialidade em Vitória, Espírito Santo">
+            CLÍNICA MULTIESPECIALIDADE · VITÓRIA/ES
+          </p>
+
+          <h1 class="hero__headline" id="hero-title">
+            <span class="reveal reveal--d1">Quarenta</span>
+            <span class="reveal reveal--d2">minutos podem</span>
+            <span class="reveal reveal--d3">mudar tudo<span class="hero__period" aria-hidden="true">.</span></span>
+          </h1>
+
+          <p class="hero__sub reveal reveal--d4">
+            Na VitaSaúde, sua primeira consulta nunca dura menos que isso.
+            Porque diagnóstico bom começa com escuta&nbsp;— não com pressa.
+          </p>
+
+          <div class="hero__actions reveal reveal--d5">
+            <a href="#agendar" class="btn btn--primary btn--hero">Marcar primeira consulta</a>
+            <a href="#historia" class="btn btn--link">
+              Conheça nossa história
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero__aside" aria-hidden="true">
+          <div class="hero__aside-decoration">
+            <div class="dec-ring dec-ring--1"></div>
+            <div class="dec-ring dec-ring--2"></div>
+            <div class="dec-ring dec-ring--3"></div>
+          </div>
+          <div class="hero__aside-box">
+            <div class="hero__forty">40</div>
+            <div class="hero__aside-rule"></div>
+            <div class="hero__aside-caption">
+              <span>Minutos mínimos</span>
+              <span>por consulta</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+      <div class="hero__meta">
+        <div class="hero__meta-left">
+          <span>Desde 2019</span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span>CRM-ES 12.847</span>
+          <span class="meta-sep" aria-hidden="true">·</span>
+          <span>Dr. Henrique Barreto</span>
+        </div>
+        <div class="hero__meta-right" aria-hidden="true">
+          <span class="scroll-label">Explorar</span>
+          <div class="scroll-line"><div class="scroll-line__fill"></div></div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ================================================================
+         02 · MANIFESTO — A razão de existir
+         ================================================================ -->
+    <section class="manifesto" id="historia" aria-labelledby="manifesto-title">
+      <div class="manifesto__inner">
+
+        <header class="manifesto__header">
+          <span class="section-num eyebrow reveal">02</span>
+          <h2 class="manifesto__title reveal" id="manifesto-title">
+            A razão<br>de existir.
+          </h2>
+        </header>
+
+        <div class="manifesto__img-strip">
+          <img
+            src="https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?auto=format&fit=crop&w=1400&h=420&q=75"
+            alt="Médico em consulta com paciente — atendimento humanizado na VitaSaúde"
+            loading="lazy"
+            width="1400" height="420"
+          >
+        </div>
+
+        <div class="manifesto__body">
+          <blockquote class="manifesto__quote reveal">
+            <p>"Oito minutos não bastam para ouvir. Não bastam para perguntar. Não bastam para entender o que uma pessoa está vivendo."</p>
+            <footer>— Dr. Henrique Barreto, fundador da VitaSaúde</footer>
+          </blockquote>
+
+          <div class="manifesto__text">
+            <p class="reveal">
+              Era 2019. Maria tinha 58 anos e um diagnóstico que poderia ter sido feito meses antes. Uma consulta de oito minutos havia deixado passar o que estava à vista. O Dr. Henrique Barreto estava na sala de espera quando recebeu a notícia.
+            </p>
+            <p class="reveal">
+              Naquele dia, ele tomou uma decisão que mudaria sua carreira — e a vida de milhares de pacientes em Vitória. Fundaria uma clínica com uma única regra inegociável: <strong>a primeira consulta nunca duraria menos que quarenta minutos.</strong>
+            </p>
+            <p class="reveal">
+              Não porque é uma boa prática. Porque é a única forma de fazer medicina de verdade. Diagnóstico bom começa com escuta — e escuta precisa de tempo.
+            </p>
+            <a href="#agendar" class="btn btn--link reveal">
+              Marcar uma consulta
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="manifesto__stats" aria-label="Números da VitaSaúde">
+          <div class="stat reveal">
+            <div class="stat__top">
+              <span class="stat__num" data-count="5000" data-suffix="+">0</span>
+            </div>
+            <span class="stat__label">pacientes atendidos</span>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__top">
+              <span class="stat__num" data-count="40">0</span>
+              <span class="stat__unit">min</span>
+            </div>
+            <span class="stat__label">consulta mínima</span>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__top">
+              <span class="stat__num" data-count="8">0</span>
+            </div>
+            <span class="stat__label">especialidades</span>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__top">
+              <span class="stat__num">2019</span>
+            </div>
+            <span class="stat__label">fundação</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         03 · ESPECIALIDADES
+         ================================================================ -->
+    <section class="especialidades" id="especialidades" aria-labelledby="esp-title">
+      <div class="especialidades__inner">
+
+        <header class="esp__header">
+          <span class="section-num eyebrow reveal">03</span>
+          <h2 id="esp-title" class="reveal">O que<br>tratamos.</h2>
+          <p class="esp__sub reveal">Oito especialidades sob o mesmo compromisso: tempo e escuta.</p>
+        </header>
+
+        <div class="esp__grid">
+
+          <article class="esp-card esp-card--featured reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">01</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Coração com pulso -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 33C20 33 7 25.5 7 16.5a7.5 7.5 0 0 1 13-5.1 7.5 7.5 0 0 1 13 5.1C33 25.5 20 33 20 33z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M10 20h4l2.5-4 3 8 2.5-4H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Cardiologia</h3>
+            <p>Diagnóstico e tratamento de doenças do coração e vasos sanguíneos. Fundada pelo próprio Dr. Henrique Barreto, cardiologista pela USP.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">02</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Estetoscópio -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 9v11a8 8 0 0 0 16 0V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M9 9h6M25 9h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="28" cy="30" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M20 20v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M20 27c0 1.7 3.6 3 8 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Clínica Geral</h3>
+            <p>Atendimento integral e longitudinal. O mesmo médico te acompanha do diagnóstico ao tratamento.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">03</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Cérebro -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 32c-3 0-5.5-1-7-3-2-2.5-3-5-2-8a7 7 0 0 1 2-3.5A6 6 0 0 1 14 9a6 6 0 0 1 6 5 6 6 0 0 1 6-5 6 6 0 0 1 1 8.5 9 9 0 0 1 2 3.5c1 3 0 5.5-2 8-1.5 2-4 3-7 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M20 14v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M14 19c2-1 4-1 6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M26 19c-2-1-4-1-6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Neurologia</h3>
+            <p>Doenças do sistema nervoso central e periférico, com abordagem multidisciplinar.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">04</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Lupa sobre pele -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="17" cy="17" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M24 24l8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M13 17a4 4 0 0 1 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Dermatologia</h3>
+            <p>Saúde e estética da pele. Diagnóstico preciso, tratamentos não invasivos.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">05</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Osso / articulação -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 10a4 4 0 1 0 4 4v12a4 4 0 1 0 4-4H10a4 4 0 1 0 4 4V14a4 4 0 1 0 4-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Ortopedia</h3>
+            <p>Lesões musculoesqueléticas, dor crônica e reabilitação funcional.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">06</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Símbolo feminino / Vênus -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="16" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M20 25v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M15.5 30h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Ginecologia</h3>
+            <p>Saúde da mulher em todas as fases da vida, com escuta ativa e cuidado integral.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">07</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Borboleta / tireoide -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 20c-1-5-5-9-9-8s-5 7-2 11c1.5 2 4 2.5 6 1.5L20 20z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M20 20c1-5 5-9 9-8s5 7 2 11c-1.5 2-4 2.5-6 1.5L20 20z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M20 24.5V32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M20 8v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Endocrinologia</h3>
+            <p>Disfunções hormonais, diabetes, tireoide e metabolismo.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+          <article class="esp-card reveal">
+            <div class="esp-card__top">
+              <span class="esp-card__num eyebrow">08</span>
+              <div class="esp-card__icon" aria-hidden="true">
+                <!-- Cabeça com ondas mentais -->
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 28v-5a7 7 0 1 1 14 0v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M10 28h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M16 17c1-2 2.5-3 4-3s3 1 4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M13 20.5c-.8-.5-1.5-1.2-2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M27 20.5c.8-.5 1.5-1.2 2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Psiquiatria</h3>
+            <p>Saúde mental com abordagem humanizada, sem estigma e com tempo real de escuta.</p>
+            <div class="esp-card__rule"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         04 · MÉDICOS
+         ================================================================ -->
+    <section class="medicos" id="medicos" aria-labelledby="medicos-title">
+      <div class="medicos__inner">
+
+        <header class="medicos__header">
+          <span class="section-num eyebrow reveal">04</span>
+          <h2 id="medicos-title" class="reveal">Quem vai<br>te ouvir.</h2>
+          <p class="medicos__sub reveal">
+            Cada médico assinou o mesmo compromisso: tempo mínimo, escuta real, continuidade.
+          </p>
+        </header>
+
+        <div class="medicos__grid">
+
+          <article class="medico-card medico-card--featured reveal">
+            <div class="medico-card__photo">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&h=800&q=80"
+                alt="Dr. Henrique Barreto, cardiologista e fundador da VitaSaúde"
+                loading="lazy"
+                width="600" height="800"
+              >
+            </div>
+            <div class="medico-card__info">
+              <span class="eyebrow">Fundador · Cardiologia</span>
+              <h3>Dr. Henrique<br>Barreto</h3>
+              <p>CRM-ES 12.847 · Cardiologista pela USP. Pós-graduação em Medicina Interna pela UFES. 20 anos de clínica, 5 de VitaSaúde.</p>
+              <div class="medico-card__rule"></div>
+              <a href="#agendar" class="btn btn--link">Agendar com este médico</a>
+            </div>
+          </article>
+
+          <article class="medico-card reveal">
+            <div class="medico-card__photo">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&h=800&q=80"
+                alt="Dra. Mariana Costa, neurologista"
+                loading="lazy"
+                width="600" height="800"
+              >
+            </div>
+            <div class="medico-card__info">
+              <span class="eyebrow">Neurologia</span>
+              <h3>Dra. Mariana Costa</h3>
+              <p>CRM-ES 18.392 · Residência no Hospital das Clínicas de São Paulo.</p>
+              <div class="medico-card__rule"></div>
+              <a href="#agendar" class="btn btn--link">Agendar</a>
+            </div>
+          </article>
+
+          <article class="medico-card reveal">
+            <div class="medico-card__photo">
+              <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&h=800&q=80"
+                alt="Dr. Rafael Souza, clínico geral"
+                loading="lazy"
+                width="600" height="800"
+              >
+            </div>
+            <div class="medico-card__info">
+              <span class="eyebrow">Clínica Geral</span>
+              <h3>Dr. Rafael Souza</h3>
+              <p>CRM-ES 21.104 · Especialista em Medicina de Família e Comunidade.</p>
+              <div class="medico-card__rule"></div>
+              <a href="#agendar" class="btn btn--link">Agendar</a>
+            </div>
+          </article>
+
+          <article class="medico-card reveal">
+            <div class="medico-card__photo">
+              <img
+                src="https://images.unsplash.com/photo-1673865641073-4479f93a7776?auto=format&fit=crop&w=600&h=800&q=80"
+                alt="Dra. Juliana Ferreira, dermatologista"
+                loading="lazy"
+                width="600" height="800"
+              >
+            </div>
+            <div class="medico-card__info">
+              <span class="eyebrow">Dermatologia</span>
+              <h3>Dra. Juliana Ferreira</h3>
+              <p>CRM-ES 15.667 · Dermatologista pela SBD, com foco em dermatoscopia.</p>
+              <div class="medico-card__rule"></div>
+              <a href="#agendar" class="btn btn--link">Agendar</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         05 · COMO FUNCIONA
+         ================================================================ -->
+    <section class="como-funciona" id="como-funciona" aria-labelledby="cf-title">
+      <div class="cf__inner">
+
+        <header class="cf__header">
+          <span class="section-num eyebrow reveal">05</span>
+          <h2 id="cf-title" class="reveal">Como<br>funciona.</h2>
+        </header>
+
+        <ol class="cf__steps" role="list">
+
+          <li class="cf-step reveal">
+            <span class="cf-step__num" aria-hidden="true">01</span>
+            <div class="cf-step__body">
+              <h3>Agendamento</h3>
+              <p>Marque sua consulta online em menos de 2 minutos. Escolha o médico, o dia e o horário que funcionam pra você. Sem fila, sem call center.</p>
+            </div>
+          </li>
+
+          <li class="cf-step reveal">
+            <span class="cf-step__num" aria-hidden="true">02</span>
+            <div class="cf-step__body">
+              <h3>Primeira consulta</h3>
+              <p>No mínimo 40 minutos com seu médico. Sem interrupções, sem pressa. Ele vai perguntar sobre sua vida — não só sobre seus sintomas.</p>
+            </div>
+          </li>
+
+          <li class="cf-step reveal">
+            <span class="cf-step__num" aria-hidden="true">03</span>
+            <div class="cf-step__body">
+              <h3>Diagnóstico</h3>
+              <p>Baseado em anamnese profunda e, se necessário, exames e encaminhamentos dentro da própria rede VitaSaúde — sem você precisar começar do zero.</p>
+            </div>
+          </li>
+
+          <li class="cf-step reveal">
+            <span class="cf-step__num" aria-hidden="true">04</span>
+            <div class="cf-step__body">
+              <h3>Acompanhamento</h3>
+              <p>O mesmo médico te acompanha ao longo do tempo. Ele conhece seu histórico. Não precisa se apresentar de novo a cada consulta.</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         06 · DEPOIMENTOS
+         ================================================================ -->
+    <section class="depoimentos" id="depoimentos" aria-labelledby="dep-title">
+      <div class="dep__inner">
+
+        <header class="dep__header">
+          <span class="section-num eyebrow reveal">06</span>
+          <h2 id="dep-title" class="reveal">O que dizem<br>nossos pacientes.</h2>
+        </header>
+
+        <div class="dep__grid">
+
+          <blockquote class="depoimento reveal">
+            <div class="depoimento__quote-mark" aria-hidden="true">"</div>
+            <p>Fui pela primeira vez achando que seria mais uma clínica. O Dr. Henrique ficou 55 minutos comigo. Ele descobriu uma arritmia que dois outros cardiologistas tinham deixado passar.</p>
+            <footer class="depoimento__footer">
+              <strong>Ana Lúcia M.</strong>
+              <span>Paciente desde 2020</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="depoimento reveal">
+            <div class="depoimento__quote-mark" aria-hidden="true">"</div>
+            <p>A diferença não é o equipamento. É o tempo. Pela primeira vez um médico me perguntou como estava minha vida antes de pedir um exame.</p>
+            <footer class="depoimento__footer">
+              <strong>Roberto F.</strong>
+              <span>Paciente desde 2021</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="depoimento reveal">
+            <div class="depoimento__quote-mark" aria-hidden="true">"</div>
+            <p>Minha mãe tem 72 anos e sempre saía das consultas sem entender nada. Na VitaSaúde, o médico explica, desenha, pergunta se ela entendeu. É medicina de outro tempo — no bom sentido.</p>
+            <footer class="depoimento__footer">
+              <strong>Camila T.</strong>
+              <span>Familiar de paciente</span>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         07 · CONVÊNIOS
+         ================================================================ -->
+    <section class="convenios" id="convenios" aria-labelledby="conv-title">
+      <div class="conv__inner">
+
+        <header class="conv__header">
+          <span class="section-num eyebrow reveal">07</span>
+          <h2 id="conv-title" class="reveal">Convênios<br>aceitos.</h2>
+        </header>
+
+        <div class="conv__grid">
+          <div class="conv-item reveal">Unimed</div>
+          <div class="conv-item reveal">Bradesco Saúde</div>
+          <div class="conv-item reveal">SulAmérica</div>
+          <div class="conv-item reveal">Amil</div>
+          <div class="conv-item reveal">Porto Seguro</div>
+          <div class="conv-item reveal">Hapvida</div>
+          <div class="conv-item conv-item--highlight reveal">Particular</div>
+          <div class="conv-item reveal">Servidor Público</div>
+        </div>
+
+        <p class="conv__note reveal">
+          Não encontrou seu convênio? <a href="#agendar" class="btn btn--link">Entre em contato</a> — trabalhamos com a maioria dos planos nacionais.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         08 · FAQ
+         ================================================================ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq__inner">
+
+        <header class="faq__header">
+          <span class="section-num eyebrow reveal">08</span>
+          <h2 id="faq-title" class="reveal">Perguntas<br>frequentes.</h2>
+        </header>
+
+        <div class="faq__list" role="list">
+
+          <details class="faq-item reveal" role="listitem">
+            <summary>Por que a primeira consulta dura 40 minutos?</summary>
+            <div class="faq-item__body">
+              <p>Porque diagnóstico bom começa com escuta. Em 8 minutos, um médico consegue anotar seus sintomas. Em 40 minutos, ele entende sua história, seu estilo de vida e o que realmente está acontecendo. A VitaSaúde foi fundada sobre essa convicção.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal" role="listitem">
+            <summary>Posso escolher meu médico?</summary>
+            <div class="faq-item__body">
+              <p>Sim. Ao agendar, você vê o perfil completo de cada médico disponível — especialidade, formação, abordagem — e escolhe com quem quer se consultar. Uma vez escolhido, esse médico será o seu nas próximas visitas.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal" role="listitem">
+            <summary>As consultas de retorno também duram 40 minutos?</summary>
+            <div class="faq-item__body">
+              <p>As consultas de retorno têm duração mínima de 20 minutos. Mas se precisar de mais tempo, o médico não vai olhar pro relógio. O compromisso é com você — não com a agenda.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal" role="listitem">
+            <summary>Como funciona o atendimento por convênio?</summary>
+            <div class="faq-item__body">
+              <p>Atendemos a maioria dos grandes convênios. Ao agendar, informe seu plano e verificamos a cobertura em tempo real. Para planos não conveniados, oferecemos consultas particulares com valores transparentes.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal" role="listitem">
+            <summary>Quanto tempo antes devo chegar?</summary>
+            <div class="faq-item__body">
+              <p>Pedimos que chegue 10 minutos antes para o preenchimento da ficha. Se for sua primeira vez, traga exames anteriores — o médico vai querer conhecer seu histórico completo.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         09 · CTA FINAL
+         ================================================================ -->
+    <section class="cta-final" id="agendar" aria-labelledby="cta-title">
+      <div class="cta-final__inner">
+
+        <div class="cta-final__content">
+          <span class="eyebrow reveal">Dê o primeiro passo</span>
+          <h2 id="cta-title" class="reveal">Pronto para uma<br>consulta diferente?</h2>
+          <p class="reveal">Agende agora e experimente o que é ser realmente ouvido.</p>
+
+          <div class="cta-final__actions reveal">
+            <a href="tel:+5527999999999" class="btn btn--clay btn--hero">
+              Marcar primeira consulta
+            </a>
+          </div>
+
+          <address class="cta-final__contact reveal">
+            <a href="tel:+5527999999999">(27) 3000-0000</a>
+            <span aria-hidden="true">·</span>
+            <a href="mailto:contato@vitasaude.com.br">contato@vitasaude.com.br</a>
+            <span aria-hidden="true">·</span>
+            <span>Av. Jerônimo Monteiro, 1000 — Vitória/ES</span>
+          </address>
+        </div>
+
+        <div class="cta-final__deco" aria-hidden="true">
+          <span class="cta-final__forty">40</span>
+          <span class="cta-final__label">minutos<br>que mudam<br>tudo.</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="VitaSaúde">
+          Vita<span>Saúde</span>
+        </a>
+        <p class="footer__tagline">Medicina que escuta<br>antes de prescrever.</p>
+        <address class="footer__address">
+          Av. Jerônimo Monteiro, 1000<br>
+          Centro · Vitória/ES · CEP 29010-003<br>
+          <a href="tel:+5527999999999">(27) 3000-0000</a>
+        </address>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+
+        <div class="footer__col">
+          <h4>Clínica</h4>
+          <ul role="list">
+            <li><a href="#historia">Nossa história</a></li>
+            <li><a href="#medicos">Médicos</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#convenios">Convênios</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Pacientes</h4>
+          <ul role="list">
+            <li><a href="#agendar">Agendar consulta</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#">Portal do paciente</a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2024 VitaSaúde. Todos os direitos reservados.</p>
+      <p>CFM · CRM-ES · VitaSaúde Medicina Ltda.</p>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp FAB — fixo no canto inferior direito -->
+  <a
+    class="whatsapp-fab"
+    href="https://wa.me/5527999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20na%20VitaSaúde."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a VitaSaúde pelo WhatsApp"
+  >
+    <svg class="whatsapp-fab__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-fab__label">Falar pelo WhatsApp</span>
+  </a>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
